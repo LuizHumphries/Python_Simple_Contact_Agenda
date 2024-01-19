@@ -100,8 +100,7 @@ while True:
             update_contact(contacts, favorites, contact_index_to_update)
             see_full_contact_list(contacts)
         else:
-            print("\nContact Invalid") 
-        
+            print("\nContact Invalid")    
     elif contact_list_options == "5":
         see_full_contact_list(contacts)
         contact_index_to_favorite = int(input("Select the contact you want to add to Favorite List: ")) - 1
