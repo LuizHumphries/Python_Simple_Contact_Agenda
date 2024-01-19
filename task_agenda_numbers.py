@@ -14,6 +14,13 @@ def _change_default(contacts: Contacts, favorites: Favorites, contact_index: int
         contacts[contact_index][f"{variable.capitalize()}"] = contacts[contact_index][f"{variable.capitalize()}"]
     else:
         print("The answer must be Y/y or N/n")
+    
+    try:
+        favorite_index = favorites.index(contacts[contact_index])
+        favorites[favorite_index] = contacts[contact_index]
+    except:
+        pass
+
 
 def add_contact(contacts: Contacts, contact: Contact) -> None:
     contact = {"Name": contact["Name"], "Phone": contact["Phone"], "Email": contact["Email"], "Favorite": contact["Favorite"]}
